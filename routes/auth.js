@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const router = express.Router();
 
@@ -8,9 +9,10 @@ const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-const JWT_secret = "thisisanimportantstring1234"
 
 const fetchUser = require('../Middleware/fetchUser');
+
+const JWT_secret = "thisisanimportantstring1234"
 
 
 // Create User   -> No Login required   

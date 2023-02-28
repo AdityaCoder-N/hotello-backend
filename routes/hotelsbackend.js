@@ -21,7 +21,6 @@ router.post('/createhotel',async (req,res)=>{
 
         const newHotel = new Hotel({name,address,photos,rating,price,rooms});
         
-
         // console.log(newHotel);
 
         const savedHotel = await newHotel.save();
