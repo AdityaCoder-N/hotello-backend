@@ -25,41 +25,7 @@ router.post('/createhotel',async (req,res)=>{
 
         const savedHotel = await newHotel.save();
         
-        // saving default rooms in hotels
-        const res1 = await fetch(`${host}/rooms/createRoom/${savedHotel._id}`,{
-
-            method:'POST',
-
-            headers:{
-                'content-type':'application/json'
-            },
-
-            body:JSON.stringify({
-                "title":"King size room",
-                "desc":"King size room with balcony and washroom ",
-                "price":"4000",
-                "maxPeople":3,
-                "roomNumbers" : [{"number":101} , {"number":102}, {"number":103}, {"number":104}, {"number":105} ]
-            })
-        })
-        const res2 = await fetch(`${host}/rooms/createRoom/${savedHotel._id}`,{
-
-            method:'POST',
-
-            headers:{
-                'content-type':'application/json'
-            },
-
-            body:JSON.stringify({
-                "title":"Regular room",
-                "desc":"Regular room with attached washroom",
-                "price":"2500",
-                "maxPeople":3,
-                "roomNumbers" : [{"number":301} , {"number":302}, {"number":303}, {"number":304}]
-            })
-        })
         
-        console.log("Response of room : ",res1,res2)
         res.status(200).json(savedHotel);
 
 
