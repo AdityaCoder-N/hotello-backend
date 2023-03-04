@@ -7,7 +7,6 @@ const router = express.Router();
 // create Room
 router.post('/createRoom/:hotelid',async (req,res)=>{
 
-    console.log("chala");
     const HotelId = req.params.hotelid;
     const newRoom = new Room(req.body);
 

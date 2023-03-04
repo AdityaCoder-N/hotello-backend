@@ -11,7 +11,6 @@ const instance = new Razorpay({
     key_secret: 'HLnT6t3mZNvDPC6zkgpBQnzz',
 });
 
-const client_host = 'http://localhost:3000'
 
 router.post('/checkout',async (req,res)=>{
 

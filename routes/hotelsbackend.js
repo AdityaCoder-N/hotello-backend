@@ -3,7 +3,7 @@ const  Hotel  = require('../Models/Hotel');
 const  Room  = require('../Models/Room');
 
 const router  = express.Router();
-const host = 'http://localhost:3001'
+const host = 'https://hotello-backend-pjrg.onrender.com'
 //CREATE 
 router.post('/createhotel',async (req,res)=>{
 
