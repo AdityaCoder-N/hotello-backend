@@ -15,7 +15,7 @@ router.post('/createhotel',async (req,res)=>{
         
         if(found.length>0)
         {
-            res.status(200).json(found[0]);
+            res.status(200).json({found:true,hotel:found[0]});
             return;
         }
 
@@ -26,7 +26,7 @@ router.post('/createhotel',async (req,res)=>{
         const savedHotel = await newHotel.save();
         
         
-        res.status(200).json(savedHotel);
+        res.status(200).json({found:false,hotel:savedHotel});
 
 
     }catch(err){

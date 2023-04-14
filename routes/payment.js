@@ -5,10 +5,18 @@ const router = express.Router();
 const Razorpay = require('razorpay');
 const Payment = require('../Models/Payment');
 
+// new
+// RAZORPAY_API_KEY="rzp_test_wnL37MZvy61a4M"
+// RAZORPAY_API_SECRET="QXdFQmGqVCqoB675iC0s9YoD"
 
 const instance = new Razorpay({
-    key_id: 'rzp_test_tsOMmrkK3lhvfu',
-    key_secret: 'HLnT6t3mZNvDPC6zkgpBQnzz',
+
+    key_id: 'rzp_test_wnL37MZvy61a4M',
+    key_secret: 'QXdFQmGqVCqoB675iC0s9YoD',
+
+    // old
+    // key_id: 'rzp_test_tsOMmrkK3lhvfu',
+    // key_secret: 'HLnT6t3mZNvDPC6zkgpBQnzz',
 });
 
 
@@ -67,7 +75,7 @@ router.post('/paymentVerification',async (req,res)=>{
 
 })
 
-router.get('/getKey',(req,res)=>res.status(200).json({key:'rzp_test_tsOMmrkK3lhvfu'}));
+router.get('/getKey',(req,res)=>res.status(200).json({key:'rzp_test_wnL37MZvy61a4M'}));
 
 
 module.exports = router;
