@@ -11,6 +11,10 @@ app.use(cors());
 app.use(express.json());
 // available routes
 
+app.get('/',(req,res)=>{
+    res.send("<h2>Working</h2>")
+})
+
 app.use('/auth',require('./routes/auth'));
 app.use('/hotels',require('./routes/hotelsbackend'));
 app.use('/rooms',require('./routes/rooms'));
