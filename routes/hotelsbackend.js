@@ -25,7 +25,7 @@ router.post('/createhotel',async (req,res)=>{
 
         const savedHotel = await newHotel.save();
         
-        
+        console.log("yahi chalra")
         res.status(200).json({found:false,hotel:savedHotel});
 
 
